@@ -43,9 +43,9 @@ class math1_checker:
     else:
       print('\033[91m Test 1: Failed')
 
-  def test_ex7(self , f1 , f2):
+  def test_ex7(self , F):
     print("11111")
-    if f1(9) - f2(-4) == self.dg(9) - self.dg_dd(-4):
+    if f[0](9) - f[1](-4) == self.dg(9) - self.dg_dd(-4):
       print('\033[92m Test 1: Passed')
     else:
       print('\033[91m Test 1: Failed')
