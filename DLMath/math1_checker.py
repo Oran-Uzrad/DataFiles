@@ -127,10 +127,10 @@ class math1_checker:
     return 6*x + 2
 
   def M1(self , x):
-    return 5*u_ex_nine(x) + 3*v_ex_nine(x)
+    return 5*self.u_ex_nine(x) + 3*self.v_ex_nine(x)
 
   def dM1_dx(self , x):
-    return 5*du_ex_nine_dx(x) + 3*dv_ex_nine_dx(x)
+    return 5*self.du_ex_nine_dx(x) + 3*self.dv_ex_nine_dx(x)
 
   def u_ex_ten(self , x):
     return 3*x + 2
@@ -139,8 +139,8 @@ class math1_checker:
     return 3
 
   def M4(self , x):
-    return 5*u_ex_ten(x)**2 - 6*u_ex_ten(x)
+    return 5*self.u_ex_ten(x)**2 - 6*self.u_ex_ten(x)
 
   def dM4_dx(self , x):
-    return 10*u_ex_ten(x)*du_ex_ten_dx(x) -6*du_ex_ten_dx(x)
+    return 10*self.u_ex_ten(x)*self.du_ex_ten_dx(x) -6*self.du_ex_ten_dx(x)
 
