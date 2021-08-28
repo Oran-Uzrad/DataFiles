@@ -1,44 +1,36 @@
-class functions_assignment_checker:
+from datetime import datetime
+from pytz import timezone
+
+class python_test_checker:
 
   def __init__(self , name):
     self.name = name
+    self.log = open('/content/gdrive/MyDrive/Colab Notebooks/checkers/python_test_log.txt' , 'a')
+    self.log.write('----- New seesion at ' + str(datetime.now(timezone('Europe/Berlin'))) + ' -----\n')
 
-  def test_ex1(self , f):
-    if f(3) == 9:
-      print('\033[92m Test 1: Passed')
-    else:
-      print('\033[91m Test 1: Failed')
-    if f(-4) == 16:
-      print('\033[92m Test 2: Passed')
-    else:
-      print('\033[91m Test 2: Failed')
+  def personal_details(self):
+    self.log.write('Student:\n')
+    self.log.write('\tName: ' + input('Name: ') + '\n')
+    self.log.write('\tTeacher: ' + input('Teacher: ') + '\n')
 
-  def test_ex2(self , f):
-    if f(3 , 3 , 3) == 3:
-      print('\033[92m Test 1: Passed')
-    else:
-      print('\033[91m Test 1: Failed')
-    if f(-4 , 5 , -9) == 5:
-      print('\033[92m Test 2: Passed')
-    else:
-      print('\033[91m Test 2: Failed')
+  def submit(self):
+    self.log.close()
 
-  def test_ex3(self , f):
-    if f(3 , 3):
-      print('\033[92m Test 1: Passed')
+  def q1_check(self):
+    try:
+      a = int(input("Enter answer number 1,2,3 or 4: "))
+    except:
+      raise ValueError(f"{a} not a legal answer")
+    if a < 1 or a > 4:
+      raise ValueError(f"{a} not a legal answer")
+    if a == 2:
+      self.log.write(f"q1 correct answer: {a}\n")
     else:
-      print('\033[91m Test 1: Failed')
-    if not f(-4 , 5):
-      print('\033[92m Test 2: Passed')
-    else:
-      print('\033[91m Test 2: Failed')
+      self.log.write(f"q1 wrong answer: {a}\n")
 
-  def test_ex4(self , f):
-    if f(0 , 0 , 0 , 0 , 0) == 0:
-      print('\033[92m Test 1: Passed')
+  def q2_check(self , f):
+    l = f()
+    if l == [30, 33, 39, 42, 45, 51, 54, 57, 63, 66, 69, 75]:
+      self.log.write(f"q2 correct answer: {str(l)}\n")
     else:
-      print('\033[91m Test 1: Failed')
-    if f(-4 , 5 , 2.4 , 10.1 , 12) == (-4+5+2.4+10.1+12)/5:
-      print('\033[92m Test 2: Passed')
-    else:
-      print('\033[91m Test 2: Failed')
+      self.log.write(f"q2 wrong answer: {str(l)}\n")
