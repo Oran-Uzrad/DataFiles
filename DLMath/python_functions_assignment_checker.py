@@ -28,10 +28,10 @@ class functions_assignment_checker:
       print('\033[92m Test 1: Passed')
     else:
       print('\033[91m Test 1: Failed')
-    if not f(-4 , 5):
-      print('\033[92m Test 2: Passed')
+    if f(-4 , 5):
+      print('\033[92m Test 2: Failed1')
     else:
-      print('\033[91m Test 2: Failed')
+      print('\033[91m Test 2: Passed1')
 
   def test_ex4(self , f):
     if f(0 , 0 , 0 , 0 , 0) == 0:
