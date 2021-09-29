@@ -71,7 +71,7 @@ class functions_loops_checker:
       n = random.randint(0,101)
       if n > max:
         max = n
-    return n
+    return max
 
   def index_of_largest_of_hundred(self):
     max = -1
