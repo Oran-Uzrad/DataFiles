@@ -1,5 +1,5 @@
 
-class functions_assignment_checker:
+class strings_assignment_checker:
 
   def __init__(self , name):
     self.name = name
