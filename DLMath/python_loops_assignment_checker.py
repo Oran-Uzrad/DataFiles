@@ -77,7 +77,7 @@ class functions_loops_checker:
     max = -1
     indx = -1
     for i in range(100):
-      n = random.randint(0,101)
+      n = random.randint(0,100)
       if n > max:
         max = n
         indx = i
