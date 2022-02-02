@@ -41,7 +41,7 @@ def load_planar_dataset():
     D = 2 # dimensionality
     X = np.zeros((m,D)) # data matrix where each row is a single example
     Y = np.zeros((m,1), dtype='uint8') # labels vector (0 for red, 1 for blue)
-    a = 4 # maximum ray of the flower
+    a = 1 # maximum ray of the flower
 
     for j in range(2):
         ix = range(N*j,N*(j+1))
