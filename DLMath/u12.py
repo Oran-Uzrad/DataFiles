@@ -8,7 +8,6 @@ from sklearn.neural_network import MLPClassifier
 import matplotlib.colors
 
 def plot_decision_boundary(model, X, y , sklearn = False):
-    print(X.shape , y.shape)
     # Set min and max values and give it some padding
     x_min, x_max = X[0, :].min() - 1, X[0, :].max() + 1
     y_min, y_max = X[1, :].min() - 1, X[1, :].max() + 1
